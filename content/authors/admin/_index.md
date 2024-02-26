@@ -46,7 +46,7 @@ education:
       institution: Sharif University of Technology
       year: 2018
 
-# Skills
+<!-- # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 skills:
   - name: Technical
@@ -85,6 +85,9 @@ skills:
         percent: 80
         icon: camera-retro
         icon_pack: fas
+
+        -->
+
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
