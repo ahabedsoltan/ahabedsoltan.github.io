@@ -51,7 +51,7 @@ sections:
       title: Recent Publications
       filters:
         folders:
-          - publication
+          - publication/conference-paper
         exclude_featured: true
     design:
       columns: '2'
