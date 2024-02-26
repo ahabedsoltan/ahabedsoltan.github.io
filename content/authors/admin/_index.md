@@ -93,13 +93,13 @@ skills:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'aabedsoltan@ucsd.edu'
+    link: aabedsoltan@ucsd.edu
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
     link: https://scholar.google.com/citations?user=IpR1QCoAAAAJ&hl=en&oi=ao
   - icon: github
     icon_pack: fab
-    link: https://github.com/ahabedsoltan
+    link: https://github.com/EigenPro/
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/amirhesam-abedsoltan-395732b9/
