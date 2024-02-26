@@ -91,7 +91,7 @@ sections:
       title: Contact
       subtitle:
       text: |-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
+        Feel free to send me an email; I'm always eager to discuss research and explore new and exciting topics.
       # Contact (add or remove contact options as necessary)
       email: aabedsoltan@ucsd.edu
       address:
