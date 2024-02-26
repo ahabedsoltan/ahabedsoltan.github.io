@@ -70,20 +70,15 @@ sections:
     design:
       columns: '2'
       view: compact
-  - block: tag_cloud
+
+    
+<!--   - block: tag_cloud
     content:
       title: Popular Topics
     design:
-      columns: '2'
+      columns: '2' -->
     
-  - block: markdown
-    content:
-      title: Gallery
-      subtitle: ''
-      text: |-
-        {{< gallery album="demo" >}}
-    design:
-      columns: '1'
+
     
   - block: contact
     id: contact
@@ -118,6 +113,16 @@ sections:
           captcha: false
     design:
       columns: '2'
+
+
+      - block: markdown
+    content:
+      title: Gallery
+      subtitle: ''
+      text: |-
+        {{< gallery album="demo" >}}
+    design:
+      columns: '1'
 
 
     
