@@ -111,7 +111,7 @@ sections:
       columns: '2'
 
 
-      - block: markdown
+  - block: markdown
     content:
       title: Gallery
       subtitle: ''
