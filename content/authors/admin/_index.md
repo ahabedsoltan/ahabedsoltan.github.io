@@ -113,7 +113,6 @@ social:
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am a third year PhD student at University of California San Diego advised by [Misha Belkin](http://misha.belkin-wang.org/)
-My research focuses on understanding the generalization behavior of machine learning model classes and their scaling behavior. I have developed an algorithm to scale kernel methods to millions of centers, establishing a state-of-the-art method. In general, I am interested in exploring the depths of machine learning and its applications.
+I am a third year PhD student at University of California San Diego advised by [Misha Belkin](http://misha.belkin-wang.org/). My research focuses on understanding the generalization behavior of machine learning model classes and their scaling behavior. I have developed an algorithm to scale kernel methods to millions of centers, establishing a state-of-the-art method. In general, I am interested in exploring the depths of machine learning and its applications.
 
 {style="text-align: justify;"}
