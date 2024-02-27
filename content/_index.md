@@ -59,7 +59,7 @@ sections:
         exclude_featured: False
     design:
       columns: '2'
-      view: citation
+      view: Compact
 
     
   - block: collection
