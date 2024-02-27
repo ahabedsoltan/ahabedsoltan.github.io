@@ -9,6 +9,7 @@ date: '2024-01-01'
 publishDate: '2024-02-27T00:38:29.222092Z'
 publication_types:
 - article-journal
-publication: '*27th International Conference on Artificial Intelligence and Statistics
-  (AISTATS)*'
+publication: In * 27th International Conference on Artificial Intelligence and Statistics*
+publication_short: In *AISTATS *
+
 ---
