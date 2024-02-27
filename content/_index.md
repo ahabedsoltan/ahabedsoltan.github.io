@@ -113,7 +113,7 @@ sections:
       title: Gallery
       subtitle: ''
       text: |-
-        {{< gallery album="" >}}
+        {{< gallery album="albums" >}}
     design:
       columns: '1'
 
