@@ -46,21 +46,17 @@ sections:
 
 
 
-  - block: Publications
+  - block: collection
     id: featured
     content:
       title: Recent Publications
-      text: |-
-        {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
-        {{% /callout %}}
       filters:
         folders:
           - publication
-        exclude_featured: False
+        featured_only: false
     design:
       columns: '2'
-      view: Compact
+      view: card
 
     
   - block: collection
