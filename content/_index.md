@@ -113,7 +113,7 @@ sections:
       title: Gallery
       subtitle: ''
       text: |-
-        {{< gallery album="albums" >}}
+        {{< gallery album="hikes" >}}
     design:
       columns: '1'
 
