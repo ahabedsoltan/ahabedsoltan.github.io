@@ -7,7 +7,7 @@ title: 'Benign, Tempered, or Catastrophic: Toward a Refined Taxonomy of Overfitt
 authors:
   - Neil Mallinar
   - James B Simon
-  - **Amirhesam Abedsoltan**
+  - Amirhesam Abedsoltan
   - Parthe Pandit
   - Mikhail Belkin
   - Preetum Nakkiran
