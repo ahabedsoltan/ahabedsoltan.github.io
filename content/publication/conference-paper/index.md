@@ -15,8 +15,7 @@ authors:
 date: '2022-07-14T00:00:00Z'
 doi: ''
 
-# Schedule page publish date (NOT publication's date).
-publishDate: '2017-01-01T00:00:00Z'
+
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -31,13 +30,6 @@ abstract: The practical success of overparameterized neural networks has motivat
 
 
 
-# Display this page in the Featured widget?
-featured: true
-
-# Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
 
 url_pdf: 'https://proceedings.neurips.cc/paper_files/paper/2022/file/08342dc6ab69f23167b4123086ad4d38-Paper-Conference.pdf'
 url_code: ''
@@ -48,28 +40,10 @@ url_slides: ''
 url_source: ''
 url_video: ''
 
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
-  focal_point: ''
-  preview_only: false
 
-# Associated Projects (optional).
-#   Associate this publication with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `internal-project` references `content/project/internal-project/index.md`.
-#   Otherwise, set `projects: []`.
-projects:
-  - example
 
-# Slides (optional).
-#   Associate this publication with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides: "example"` references `content/slides/example/index.md`.
-#   Otherwise, set `slides: ""`.
-slides: example
----
+
+
 
 {{% callout note %}}
 Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
