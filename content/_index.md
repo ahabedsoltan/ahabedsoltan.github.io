@@ -46,7 +46,7 @@ sections:
 
 
 
-  - block: collection
+  - block: Publications
     id: featured
     content:
       title: Recent Publications
