@@ -7,10 +7,10 @@ title: 'Benign, Tempered, or Catastrophic: Toward a Refined Taxonomy of Overfitt
 authors:
   - Neil Mallinar
   - James B Simon
-  - Amirhesam Abedsoltan
+  - **Amirhesam Abedsoltan**
   - Parthe Pandit
-  -  Mikhail Belkin
-  -  Preetum Nakkiran
+  - Mikhail Belkin
+  - Preetum Nakkiran
 
 date: '2022-07-14T00:00:00Z'
 doi: ''
@@ -42,6 +42,47 @@ url_video: ''
 
 ---
 
+
+---
+title: 'Toward Large Kernel Models'
+
+# Authors
+# If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
+# and it will be replaced with their full name and linked to their profile.
+authors:
+  - **Amirhesam Abedsoltan**
+  - Mikhail Belkin
+  - Parthe Pandit
+
+date: '2023-02-06T00:00:00Z'
+doi: ''
+
+
+
+# Publication type.
+# Accepts a single type but formatted as a YAML list (for Hugo requirements).
+# Enter a publication type from the CSL standard.
+publication_types: ['paper-conference']
+
+# Publication name and optional abbreviated publication name.
+publication: In *Proceedings of the 40th International Conference on Machine Learning*
+publication_short: In *ICML*
+
+abstract: Recent studies indicate that kernel machines can often perform similarly or better than deep neural networks (DNNs) on small datasets. The interest in kernel machines has been additionally bolstered by the discovery of their equivalence to wide neural networks in certain regimes. However, a key feature of DNNs is their ability to scale the model size and training data size independently, whereas in traditional kernel machines model size is tied to data size. Because of this coupling, scaling kernel machines to large data has been computationally challenging. In this paper, we provide a way forward for constructing large-scale general kernel models, which are a generalization of kernel machines that decouples the model and data, allowing training on large datasets. Specifically, we introduce EigenPro 3.0, an algorithm based on projected dual preconditioned SGD and show scaling to model and data sizes which have not been possible with existing kernel methods.
+
+
+
+
+url_pdf: 'https://proceedings.mlr.press/v202/abedsoltan23a/abedsoltan23a.pdf'
+url_code: 'https://github.com/EigenPro/EigenPro'
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+
+---
 
 
 
