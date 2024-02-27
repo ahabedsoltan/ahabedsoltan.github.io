@@ -41,8 +41,6 @@ url_source: ''
 url_video: ''
 
 
-
----
 title: 'Toward Large Kernel Models'
 
 # Authors
