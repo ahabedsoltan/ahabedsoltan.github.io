@@ -109,6 +109,7 @@ sections:
 
 
   - block: markdown
+    id: gallary
     content:
       title: Gallery
       subtitle: ''
