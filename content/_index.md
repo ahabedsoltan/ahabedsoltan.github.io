@@ -56,7 +56,7 @@ sections:
         featured_only: false
     design:
       columns: '2'
-      view: card
+      view: Compact
 
     
   - block: collection
