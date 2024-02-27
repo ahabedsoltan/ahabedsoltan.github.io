@@ -13,7 +13,7 @@ publication_types: ['paper-conference']
 publication: In *UniReps: the First Workshop on Unifying Representations in Neural Models*
 publication_short: In *UniReps*
 
-abstract: UniReps: the First Workshop on Unifying Representations in Neural Models at NeurIPS, 2023
+abstract: UniReps at NeurIPS, 2023
 
 url_pdf: 'https://openreview.net/pdf?id=I9dkBah6Z9'
 
