@@ -1,7 +1,7 @@
 ---
 title: Toward large kernel models
 authors:
-- **Amirhesam Abedsoltan**
+- Amirhesam Abedsoltan
 - Mikhail Belkin
 - Parthe Pandit
 date: '2023-01-01'
