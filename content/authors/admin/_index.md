@@ -29,9 +29,9 @@ bio: I am a third year PhD student at University of California San Diego advised
 # Interests to show in About widget
 interests:
   - Machine Learning
+  - Deep Learning
   - Optimization
   - Genralization
-  - Scaling
 
 # Education to show in About widget
 education:
