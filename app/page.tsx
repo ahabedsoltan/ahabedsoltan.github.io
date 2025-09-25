@@ -423,35 +423,39 @@ export default function HomePage() {
           </div>
 
           {/* Publications List */}
-          <div className="space-y-4">
-            {sortedAndFilteredPublications.slice(0, 3).map((pub) => (
-              <Card key={pub.id} className="border-border hover:shadow-md transition-shadow">
-                <CardContent className="p-4">
-                  <div className="space-y-3">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1">
-                        <h3 className="text-base font-semibold text-foreground text-balance leading-tight">
-                          {pub.title}
-                        </h3>
-                        <p className="text-xs text-muted-foreground mt-1">{pub.authors}</p>
-                      </div>
-                      <div className="flex flex-col items-end space-y-1">
-                        <div className="flex flex-wrap gap-1 justify-end">
-                          {pub.topics.map((topic, index) => (
-                            <Badge key={index} variant="outline" className="text-xs">
-                              {topic}
-                            </Badge>
-                          ))}
+          <div className="border rounded-lg overflow-hidden">
+            <div className="h-96 overflow-y-auto p-4">
+              <div className="space-y-4">
+                {sortedAndFilteredPublications.map((pub) => (
+                  <Card key={pub.id} className="border-border hover:shadow-md transition-shadow flex-shrink-0">
+                    <CardContent className="p-4">
+                      <div className="space-y-3">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-1">
+                            <h3 className="text-base font-semibold text-foreground text-balance leading-tight">
+                              {pub.title}
+                            </h3>
+                            <p className="text-xs text-muted-foreground mt-1">{pub.authors}</p>
+                          </div>
+                          <div className="flex flex-col items-end space-y-1">
+                            <div className="flex flex-wrap gap-1 justify-end">
+                              {pub.topics.map((topic, index) => (
+                                <Badge key={index} variant="outline" className="text-xs">
+                                  {topic}
+                                </Badge>
+                              ))}
+                            </div>
+                            <span className="text-xs text-muted-foreground">{pub.year}</span>
+                          </div>
                         </div>
-                        <span className="text-xs text-muted-foreground">{pub.year}</span>
+                        <p className="text-xs font-medium text-primary">{pub.journal}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed text-pretty">{pub.abstract}</p>
                       </div>
-                    </div>
-                    <p className="text-xs font-medium text-primary">{pub.journal}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed text-pretty">{pub.abstract}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
