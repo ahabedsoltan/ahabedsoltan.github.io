@@ -1,0 +1,38 @@
+name: Build & Export Next.js to root
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install Node (adjust version if needed)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Install deps (pnpm is in your repo; switch to npm/yarn if you prefer)
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+
+      # Build static export to ./out
+      - run: pnpm run build
+
+      # Deploy ./out to root of main via a commit
+      - name: Deploy static to root
+        run: |
+          rm -rf .git_tmp
+          mkdir .git_tmp
+          cp -r out/* .git_tmp/
+          # Clean root except .git and workflow dir
+          find . -maxdepth 1 ! -name .git ! -name .github ! -name .git_tmp -exec rm -rf {} +
+          cp -r .git_tmp/* .
+          rm -rf .git_tmp
+          touch .nojekyll
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: deploy static export to root" || echo "No changes"
+          git push
