@@ -24,7 +24,7 @@ jobs:
           node-version: '20'
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run build     # must export to ./out
+      - run: pnpm run build              # creates ./out
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
