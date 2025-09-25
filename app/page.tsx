@@ -10,50 +10,129 @@ import { Calendar, Filter, SortAsc, SortDesc } from "lucide-react"
 // Sample data - replace with your actual content
 const publications = [
   {
-    id: 1,
-    title: "Fast training of large kernel models with delayed projections",
-    journal: "39th Conference on Neural Information Processing Systems (NeurIPS 2025-Spotlight)",
-    year: 2025,
-    topics: ["Kernel methods", "Optimization"],
-    date: "2025-09-19",
-    authors: "Amirhesam Abedsoltan, Siyuan Ma, Parthe Pandit, Mikhail Belkin",
-    abstract:
-      "Classical kernel machines have historically faced significant challenges in scaling to large datasets and model sizes--a key ingredient that has driven the success of neural networks. \
-      In this paper, we present a new methodology for building kernel machines that can scale efficiently with both data size and model size. \
-      Our algorithm introduces delayed projections to Preconditioned Stochastic Gradient Descent (PSGD) allowing the training of much larger models than was previously feasible, \
-      pushing the practical limits of kernel-based learning. We validate our algorithm, EigenPro4, across multiple datasets, demonstrating drastic training speed up over the existing \
-       methods while maintaining comparable or better classification accuracy.",
-  },
-  {
     id: 2,
     title: "Task Generalization With AutoRegressive Compositional Structure: Can Learning From D Tasks Generalize to Dᵀ Tasks?",
     journal: "42nd International Conference on Machine Learning (ICML2025)",
     year: 2025,
-    topics: ["In-context learning", "Transformers", "Theory"],
+    topics: ["In-context learning", "Task generalization", "Chain-Of-Thought"],
     date: "2025-08-01",
-    authors: "Your Name, Co-Author Name",
-    abstract:
-      "An investigation into environmentally conscious computing practices and their impact on carbon footprint...",
+    authors: "A Abedsoltan, H Zhang, K Wan, H Lin, J Zhang, M Belkin",
+    abstract: "Large language models (LLMs) exhibit remarkable task generalization, solving tasks they were never explicitly trained on with only a few demonstrations. \
+    This raises a fundamental question: When can learning from a small set of tasks generalize to a large task family? In this paper, we investigate task generalization \
+    through the lens of autoregressive compositional structure, where each task is a composition of T operations, and each operation is among a finite family of d subtasks. \
+     This yields a total class of size d^T. We first show that generalization to all d^T tasks is theoretically achievable by training on only Õ(d) tasks. \
+      Empirically, we demonstrate that Transformers achieve such exponential task generalization on sparse parity functions via In-context Learning (ICL) and chain-of-thought (CoT) reasoning. \
+       We further show generalization in arithmetic and translation, beyond parity functions.",
+  },
+  {
+    id: 1,
+    title: "Fast training of large kernel models with delayed projections",
+    journal: "39th Conference on Neural Information Processing Systems (NeurIPS 2025-Spotlight)",
+    year: 2025,
+    topics: ["Kernel methods", "Optimization", "Preconditioning"],
+    date: "2024-11-25",
+    authors: "A Abedsoltan, S Ma, P Pandit, M Belkin",
+    abstract: "Classical kernel machines have historically faced significant challenges in scaling to large datasets and model sizes--a key ingredient that has driven the success of neural networks. \
+     In this paper, we present a new methodology for building kernel machines that can scale efficiently with both data size and model size. \
+     Our algorithm introduces delayed projections to Preconditioned Stochastic Gradient Descent (PSGD) allowing the training of much larger models than was previously feasible, \
+      pushing the practical limits of kernel-based learning. We validate our algorithm, EigenPro4, across multiple datasets, demonstrating drastic training speed up over \
+      the existing methods while maintaining comparable or better classification accuracy.",
   },
   {
     id: 3,
-    title: "Neural Networks in Natural Language Processing",
-    journal: "AI Communications",
-    year: 2023,
-    topics: ["Machine Learning", "NLP"],
-    date: "2023-08-10",
-    authors: "Your Name, Research Team",
-    abstract: "Exploring the latest developments in neural network architectures for NLP applications...",
+    title: "Context-Scaling versus Task-Scaling in In-Context Learning",
+    journal: "arXiv preprint arXiv:2410.12783",
+    year: 2024,
+    topics: ["In-context learning", "Transformers"],
+    date: "2024-10-16",
+    authors: "A Abedsoltan, A Radhakrishnan, J Wu, M Belkin",
+    abstract: "Transformers exhibit In-Context Learning (ICL), where these models solve new tasks by using examples in the prompt without additional training. \
+    In our work, we identify and analyze two key components of ICL: (1) context-scaling, where model performance improves as the number of in-context examples increases and \
+     (2) task-scaling, where model performance improves as the number of pre-training tasks increases. While transformers are capable of both context-scaling and task-scaling, \
+      we empirically show that standard Multi-Layer Perceptrons (MLPs) with vectorized input are only capable of task-scaling. To understand how transformers are capable of context-scaling, \
+       we first propose a significantly simplified transformer architecture without key, query, value weights. We show that it performs ICL comparably to the original GPT-2 model \
+       in various statistical learning tasks including linear regression, teacher-student settings. Furthermore, a single block of our simplified transformer can be viewed as data dependent \
+        feature map followed by an MLP. This feature map on its own is a powerful predictor that is capable of context-scaling but is not capable of task-scaling. We show empirically that concatenating \
+         the output of this feature map with vectorized data as an input to MLPs enables both context-scaling and task-scaling. This finding provides a simple setting to study context and task-scaling for ICL.",
   },
   {
     id: 4,
-    title: "Quantum Computing Applications in Cryptography",
-    journal: "Quantum Science & Technology",
+    title: "On the Nyström approximation for preconditioning in kernel machines",
+    journal: "International Conference on Artificial Intelligence and Statistics (AISTATS 2024)",
+    year: 2024,
+    topics: ["Kernel methods", "Nyström approximation", "Preconditioning"],
+    date: "2024-05-02",
+    authors: "A Abedsoltan, P Pandit, L Rademacher, M Belkin",
+    abstract: "Add your abstract here later.",
+  },
+  {
+    id: 5,
+    title: "Uncertainty estimation with recursive feature machines",
+    journal: "The 40th Conference on Uncertainty in Artificial Intelligence",
+    year: 2024,
+    topics: ["Uncertainty estimation", "Feature Learning", "Kernel methods"],
+    date: "2024-07-15",
+    authors: "D Gedon, A Abedsoltan, TB Schön, M Belkin",
+    abstract: "In conventional regression analysis, predictions are typically represented as point estimates derived from covariates. \
+     The Gaussian Process (GP) offer a kernel-based framework that predicts and additionally quantifies associated uncertainties. \
+      However, kernel-based methods often underperform ensemble-based decision tree approaches in regression tasks involving tabular and categorical data. \
+       Recently, Recursive Feature Machines (RFMs) were proposed as a novel feature-learning kernel which strengthens the capabilities of kernel machines. \
+       In this study, we harness the power RFMs in a probabilistic GP-based approach to enhance uncertainty estimation through feature extraction within kernel methods. \
+        We employ this learned kernel for in-depth uncertainty analysis. On tabular datasets, our RFM-based method surpasses other leading uncertainty estimation techniques, \
+        including NGBoost and CatBoost-ensemble. Additionally, when assessing out-of-distribution performance, we found that boosting-based methods are surpassed by our RFM-based approach.",
+  },
+  {
+    id: 6,
+    title: "On emergence of clean-priority learning in early stopped neural networks",
+    journal: "arXiv preprint arXiv:2306.02533",
+    year: 2023,
+    topics: ["Neural networks", "Early stopping", "Optimization"],
+    date: "2023-06-05",
+    authors: "C Liu, A Abedsoltan, M Belkin",
+    abstract: "Add your abstract here later.",
+  },
+  {
+    id: 7,
+    title: "Toward Large Kernel Models",
+    journal: "40th International Conference on Machine Learning (ICML2023)",
+    year: 2023,
+    topics: ["Kernel methods", "Nyström approximation", "Preconditioning"],
+    date: "2023-07-23",
+    authors: "A Abedsoltan, M Belkin, P Pandit",
+    abstract: "Add your abstract here later.",
+  },
+  {
+    id: 8,
+    title: "Benign, tempered, or catastrophic: A taxonomy of overfitting",
+    journal: "36th Conference on Neural Information Processing Systems (NeurIPS 2022)",
     year: 2022,
-    topics: ["Quantum Computing", "Cryptography"],
-    date: "2022-12-05",
-    authors: "Your Name, Quantum Research Group",
-    abstract: "A comprehensive study of quantum computing's potential impact on modern cryptographic systems...",
+    topics: ["Overfitting", "Generalization"],
+    date: "2022-12-06",
+    authors: "N Mallinar, JB Simon, A Abedsoltan, P Pandit, M Belkin, P Nakkiran",
+    abstract: "The practical success of overparameterized neural networks has motivated the recent scientific study of interpolating methods-- learning methods which are able fit their training data perfectly. \
+    Empirically, certain interpolating methods can fit noisy training data without catastrophically bad test performance, which defies standard intuitions from statistical learning theory. \
+     Aiming to explain this, a large body of recent work has studied benign overfitting, a behavior seen in certain asymptotic settings under which interpolating methods approach Bayes-optimality, \
+      even in the presence of noise. In this work, we argue that, while benign overfitting has been instructive to study, real interpolating methods like deep networks do not fit benignly. \
+       That is, noise in the train set leads to suboptimal generalization, suggesting that these methods fall in an intermediate regime between benign and catastrophic overfitting, \
+        in which asymptotic risk is neither Bayes-optimal nor unbounded, with the confounding effect of the noise being tempered but non-negligible. We call this behavior tempered overfitting. \
+        We first provide broad empirical evidence for our three-part taxonomy, demonstrating that deep neural networks and kernel machines fit to noisy data can be reasonably well classified as \
+         benign, tempered, or catastrophic. We then specialize to kernel (ridge) regression (KR), obtaining conditions on the ridge parameter and kernel eigenspectrum under which KR exhibits each of the three behaviors, \
+         demonstrating the consequences for KR with common kernels and trained neural networks of infinite width using experiments on natural and synthetic datasets.",
+  },
+  {
+    id: 9,
+    title: "On Feature Learning of Recursive Feature Machines and Automatic Relevance Determination",
+    journal: "UniReps: the First Workshop on Unifying Representations in Neural Models",
+    year: 2023,
+    topics: ["Feature learning", "Feature Learning", "Automatic relevance"],
+    date: "2023-09-18",
+    authors: "D Gedon, A Abedsoltan, TB Schön, M Belkin",
+    abstract: "Feature learning is a crucial element for the performance of machine learning models. Recently, the exploration of feature learning in the context of kernel methods \
+     has led to the introduction of Recursive Feature Machines (RFMs). In this work, we connect diagonal RFMs to Automatic Relevance Determination (ARD) from the Gaussian process literature. \
+     We demonstrate that diagonal RFMs, similar to ARD, serve as a weighted covariate selection technique. However, they are trained using different paradigms: RFMs use recursive iterations \
+     of the so-called Average Gradient Outer Product, while ARD employs maximum likelihood estimation. Our experiments show that while the learned features in both models correlate highly \
+     across various tabular datasets, this correlation is lower for other datasets. Furthermore, we demonstrate that the RFM effectively captures correlation between covariates, \
+     and we present instances where the RFM outperforms both ARD and diagonal RFM.",
   },
 ]
 
@@ -66,13 +145,13 @@ const newsItems = [
   },
   {
     id: 2,
-    title: "I started an AI resaerch intern at Figma.",
+    title: "I will be an AI Research Intern at Figma.",
     date: "June 2025",
     description: "I will be working on multi-agent workflows for prompt-to-design applications extending agent-squad from AWS.",
   },
   {
     id: 3,
-    title: "Our paper, Task Generalization With AutoRegressive Compositional Structure: Can Learning From D Tasks Generalize to Dᵀ Tasks? was accepted at ICML.",
+    title: "Our paper, “Task Generalization With AutoRegressive Compositional Structure: Can Learning From D Tasks Generalize to Dᵀ Tasks?” was accepted at ICML.",
     date: "August 2025",
     description: "We study task generalization through an autoregressive compositional framework, showing that training on only a small subset of tasks enables exponential generalization to a much larger class.\
      As an example, we demonstrate that Transformers trained on sparse parity tasks generalize in-context through chain-of-thought reasoning, and further extend to arithmetic and translation.",
@@ -81,9 +160,9 @@ const newsItems = [
 
 const hobbies = [
   {
-    name: "Photography",
-    description: "Capturing landscapes and urban architecture, with a focus on natural lighting and composition.",
-    icon: "📸",
+    name: "Tennis",
+    description: "I got into tennis because of Federer's elegance, but somewhere along the way I ended up being blown away by Djokovic's grit and brilliance!",
+    icon: "🎾",
   },
   {
     name: "Hiking",
@@ -92,13 +171,9 @@ const hobbies = [
   },
   {
     name: "Reading",
-    description: "Enjoying science fiction novels, philosophy, and biographies of innovative thinkers.",
+    description: "I'm hooked on thought-provoking reads—check my books page for a peek at some of my latest and all-time favorites.",
     icon: "📚",
-  },
-  {
-    name: "Cooking",
-    description: "Experimenting with international cuisines and sustainable, locally-sourced ingredients.",
-    icon: "👨‍🍳",
+    link: "/books",
   },
 ]
 
@@ -199,7 +274,7 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-foreground">M.S. Computer Science</span>
-                      <span className="text-muted-foreground ml-2">MIT, 2021</span>
+                      <span className="text-muted-foreground ml-2">University of Southern California, 2021</span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -355,7 +430,15 @@ export default function HomePage() {
                   <div className="flex items-start space-x-3">
                     <div className="text-2xl flex-shrink-0">{hobby.icon}</div>
                     <div className="space-y-1">
-                      <h3 className="text-base font-semibold text-foreground">{hobby.name}</h3>
+                      <h3 className="text-base font-semibold text-foreground">
+                        {hobby.link ? (
+                          <a href={hobby.link} className="hover:text-primary transition-colors">
+                            {hobby.name}
+                          </a>
+                        ) : (
+                          hobby.name
+                        )}
+                      </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed text-pretty">{hobby.description}</p>
                     </div>
                   </div>
