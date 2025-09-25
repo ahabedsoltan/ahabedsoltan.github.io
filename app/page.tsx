@@ -71,7 +71,7 @@ const publications = [
     to accelerate gradient descent nearly as well as the exact preconditioner, while also reducing the computational and storage overheads.",
   },
   {
-    id: 5,
+    id: 7,
     title: "Uncertainty estimation with recursive feature machines",
     journal: "The 40th Conference on Uncertainty in Artificial Intelligence",
     year: 2024,
@@ -87,7 +87,7 @@ const publications = [
         including NGBoost and CatBoost-ensemble. Additionally, when assessing out-of-distribution performance, we found that boosting-based methods are surpassed by our RFM-based approach.",
   },
   {
-    id: 6,
+    id: 8,
     title: "On emergence of clean-priority learning in early stopped neural networks",
     journal: "arXiv preprint arXiv:2306.02533",
     year: 2023,
@@ -102,7 +102,7 @@ const publications = [
      and finally results in a termination of the clean-priority learning and fitting of the noisy samples.",
   },
   {
-    id: 7,
+    id: 5,
     title: "Toward Large Kernel Models",
     journal: "40th International Conference on Machine Learning (ICML2023)",
     year: 2023,
@@ -118,7 +118,7 @@ const publications = [
     which have not been possible with existing kernel methods. We provide a PyTorch based implementation which can take advantage of multiple GPUs.",
   },
   {
-    id: 8,
+    id: 6,
     title: "Benign, tempered, or catastrophic: A taxonomy of overfitting",
     journal: "36th Conference on Neural Information Processing Systems (NeurIPS 2022)",
     year: 2022,
@@ -140,7 +140,7 @@ const publications = [
     title: "On Feature Learning of Recursive Feature Machines and Automatic Relevance Determination",
     journal: "UniReps: the First Workshop on Unifying Representations in Neural Models",
     year: 2023,
-    topics: ["Feature learning", "Feature Learning", "Automatic relevance"],
+    topics: ["Kernel methods", "Feature Learning", "Automatic relevance"],
     date: "2023-09-18",
     authors: "D Gedon, A Abedsoltan, TB Schön, M Belkin",
     abstract: "Feature learning is a crucial element for the performance of machine learning models. Recently, the exploration of feature learning in the context of kernel methods \
