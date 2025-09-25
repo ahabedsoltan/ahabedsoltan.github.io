@@ -4,27 +4,27 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
-// Sample books data - replace with your actual books
+// Books data
 const books = [
   {
     id: 1,
-    title: "Add your book title here",
-    author: "Author Name",
-    year: 2024,
-    category: "Fiction",
-    image: "/book1.jpg", // Add your book cover images to /public folder
+    title: "Man's Search for Meaning",
+    author: "Viktor E. Frankl",
+    year: 2006,
+    category: "Autobiography",
+    image: "/mans-search-for-meaning.jpg", // Add book cover images to /public folder
     rating: 5,
-    notes: "Add your personal notes about what you liked about this book here. What resonated with you? What insights did you gain?",
+    notes: "Caught between free will and destiny, we face the question: do we discover meaning, create it, or leave it as our legacy?!",
   },
   {
     id: 2,
-    title: "Another book title",
-    author: "Another Author",
-    year: 2023,
-    category: "Non-Fiction",
-    image: "/book2.jpg",
-    rating: 4,
-    notes: "Your thoughts and reflections on this book...",
+    title: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    year: 2014,
+    category: "History",
+    image: "/sapiens.jpg",
+    rating: 5,
+    notes: "How did we get where we are? (Short intro!)",
   },
   // Add more books here
 ]

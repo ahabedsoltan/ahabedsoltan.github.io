@@ -63,7 +63,12 @@ const publications = [
     topics: ["Kernel methods", "Nyström approximation", "Preconditioning"],
     date: "2024-05-02",
     authors: "A Abedsoltan, P Pandit, L Rademacher, M Belkin",
-    abstract: "Add your abstract here later.",
+    abstract: "Kernel methods are a popular class of nonlinear predictive models in machine learning. Scalable algorithms for learning kernel models need to be iterative in nature, \
+    but convergence can be slow due to poor conditioning. Spectral preconditioning is an important tool to speed-up the convergence of such iterative algorithms for training kernel models. \
+    However computing and storing a spectral preconditioner can be expensive which can lead to large computational and storage overheads, precluding the application of kernel methods to problems with large datasets. \
+    A Nystrom approximation of the spectral preconditioner is often cheaper to compute and store, and has demonstrated success in practical applications. \
+    In this paper we analyze the trade-offs of using such an approximated preconditioner. Specifically, we show that a sample of logarithmic size (as a function of the size of the dataset) enables the Nyström-based approximated preconditioner \
+    to accelerate gradient descent nearly as well as the exact preconditioner, while also reducing the computational and storage overheads.",
   },
   {
     id: 5,
@@ -89,7 +94,12 @@ const publications = [
     topics: ["Neural networks", "Early stopping", "Optimization"],
     date: "2023-06-05",
     authors: "C Liu, A Abedsoltan, M Belkin",
-    abstract: "Add your abstract here later.",
+    abstract: "When random label noise is added to a training dataset, the prediction error of a neural network on a label-noise-free test dataset initially improves during early training but eventually deteriorates, \
+     following a U-shaped dependence on training time. This behaviour is believed to be a result of neural networks learning the pattern of clean data first and fitting the noise later in the training, \
+     a phenomenon that we refer to as clean-priority learning. In this study, we aim to explore the learning dynamics underlying this phenomenon. We theoretically demonstrate that, in the early stage of training, \
+     the update direction of gradient descent is determined by the clean subset of training data, leaving the noisy subset has minimal to no impact, resulting in a prioritization of clean learning. \
+     Moreover, we show both theoretically and experimentally, as the clean-priority learning goes on, the dominance of the gradients of clean samples over those of noisy samples diminishes, \
+     and finally results in a termination of the clean-priority learning and fitting of the noisy samples.",
   },
   {
     id: 7,
@@ -99,7 +109,13 @@ const publications = [
     topics: ["Kernel methods", "Nyström approximation", "Preconditioning"],
     date: "2023-07-23",
     authors: "A Abedsoltan, M Belkin, P Pandit",
-    abstract: "Add your abstract here later.",
+    abstract: "Recent studies indicate that kernel machines can often perform similarly or better than deep neural networks (DNNs) on small datasets. \
+    The interest in kernel machines has been additionally bolstered by the discovery of their equivalence to wide neural networks in certain regimes. \
+    However, a key feature of DNNs is their ability to scale the model size and training data size independently, whereas in traditional kernel machines model \
+    size is tied to data size. Because of this coupling, scaling kernel machines to large data has been computationally challenging. In this paper, \
+    we provide a way forward for constructing large-scale general kernel models, which are a generalization of kernel machines that decouples the model and data, \
+    allowing training on large datasets. Specifically, we introduce EigenPro 3.0, an algorithm based on projected dual preconditioned SGD and show scaling to model and data sizes \
+    which have not been possible with existing kernel methods. We provide a PyTorch based implementation which can take advantage of multiple GPUs.",
   },
   {
     id: 8,
@@ -423,7 +439,7 @@ export default function HomePage() {
             <div className="w-16 h-0.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-3 gap-4">
             {hobbies.map((hobby, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
