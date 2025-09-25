@@ -121,11 +121,11 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-foreground text-balance">Dr. Your Name</h1>
-              <p className="text-sm text-muted-foreground">Research Scientist & Academic</p>
+              <h1 className="text-2xl font-bold text-foreground text-balance">Amirhesam Abedsoltan</h1>
+              <p className="text-sm text-muted-foreground">PhD Candidate at UC San Diego</p>
             </div>
             <nav className="hidden md:flex space-x-4">
               <a href="#bio" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -146,7 +146,7 @@ export default function HomePage() {
       </header>
 
       {/* Main Container */}
-      <main className="max-w-5xl mx-auto px-6 py-8 space-y-10">
+      <main className="max-w-7xl mx-auto px-6 py-8 space-y-10">
         {/* Bio Section */}
         <section id="bio" className="space-y-6">
           <div className="text-center space-y-2">
@@ -154,9 +154,9 @@ export default function HomePage() {
             <div className="w-16 h-0.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 items-start">
+          <div className="grid md:grid-cols-4 gap-8 items-start">
             <div className="flex justify-center">
-              <div className="w-32 h-32 bg-muted rounded-full flex items-center justify-center overflow-hidden">
+              <div className="w-48 h-48 bg-muted rounded-full flex items-center justify-center overflow-hidden shadow-lg">
                 <img
                   src="/profile.jpg"
                   alt="Profile photo"
@@ -165,9 +165,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="md:col-span-2 space-y-4">
+            <div className="md:col-span-3 space-y-4">
               <div className="prose max-w-none">
-                <p className="text-sm text-foreground leading-relaxed text-pretty">
+                <p className="text-base text-foreground leading-relaxed text-pretty">
                 Hi, I'm Amirhesam Abedsoltan, a Ph.D. candidate at UC San Diego. I was lucky to be advised by{" "}
                 <a
                   href="https://misha.belkin-wang.org/"
@@ -360,9 +360,9 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="border-t border-border bg-card/50 mt-12">
-        <div className="max-w-5xl mx-auto px-6 py-6">
+        <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="text-center space-y-3">
-            <p className="text-sm text-muted-foreground">© 2025 Dr. Your Name. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2025 Amirhesam Abedsoltan. All rights reserved.</p>
             <div className="flex justify-center space-x-4">
               <a
                 href="mailto:your.email@university.edu"
