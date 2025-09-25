@@ -423,7 +423,7 @@ export default function HomePage() {
           </div>
 
           {/* Publications List */}
-          <div className="h-96 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-track-muted scrollbar-thumb-muted-foreground">
+          <div className="h-96 overflow-y-scroll border rounded-lg p-4 space-y-4">
             {sortedAndFilteredPublications.map((pub) => (
               <Card key={pub.id} className="border-border hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
