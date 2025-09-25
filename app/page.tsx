@@ -56,21 +56,22 @@ const publications = [
 const newsItems = [
   {
     id: 1,
-    title: "Awarded Best Paper at International AI Conference 2024",
-    date: "March 2024",
-    description: "Our research on healthcare AI applications received recognition at the premier AI conference.",
+    title: "Our paper, “Fast Training of Large Kernel Models with Delayed Projections.” was spotlighted at NeurIPS.",
+    date: "September 2025",
+    description: "In this paper, we significantly reduced the runtime of kernel solvers from days to minutes by using delayed projections in Preconditioned Stochastic Gradient Descent.",
   },
   {
     id: 2,
-    title: "Invited Speaker at Tech Innovation Summit",
-    date: "February 2024",
-    description: "Delivered keynote presentation on the future of sustainable computing technologies.",
+    title: "I started an AI resaerch intern at Figma.",
+    date: "June 2025",
+    description: "I will be working on multi-agent workflows for prompt-to-design applications extending agent-squad from AWS.",
   },
   {
     id: 3,
-    title: "New Research Grant Awarded",
-    date: "January 2024",
-    description: "Received funding for groundbreaking research in quantum machine learning applications.",
+    title: "Our paper, Task Generalization With AutoRegressive Compositional Structure: Can Learning From D Tasks Generalize to Dᵀ Tasks? was accepted at ICML.",
+    date: "August 2025",
+    description: "We study task generalization through an autoregressive compositional framework, showing that training on only a small subset of tasks enables exponential generalization to a much larger class.\
+     As an example, we demonstrate that Transformers trained on sparse parity tasks generalize in-context through chain-of-thought reasoning, and further extend to arithmetic and translation.",
   },
 ]
 
@@ -155,17 +156,28 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 items-start">
             <div className="flex justify-center">
-              <div className="w-32 h-32 bg-muted rounded-full flex items-center justify-center">
-                <span className="text-4xl">👨‍🔬</span>
+              <div className="w-32 h-32 bg-muted rounded-full flex items-center justify-center overflow-hidden">
+                <img
+                  src="/profile.jpg"
+                  alt="Profile photo"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
             <div className="md:col-span-2 space-y-4">
               <div className="prose max-w-none">
                 <p className="text-sm text-foreground leading-relaxed text-pretty">
-                  I am a passionate researcher and educator dedicated to advancing the frontiers of artificial
-                  intelligence and sustainable computing. My work focuses on developing innovative solutions that bridge
-                  the gap between cutting-edge technology and real-world applications.
+                Hi, I'm Amirhesam Abedsoltan, a Ph.D. candidate at UC San Diego. I was lucky to be advised by{" "}
+                <a
+                  href="https://misha.belkin-wang.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Prof. Mikhail Belkin
+                </a>.
+                 My work broadly focuses on machine learning, spanning both theory and practice, with an interest in scaling methods and understanding how modern AI systems learn and generalize.
                 </p>
               </div>
 
@@ -176,21 +188,21 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-foreground">Ph.D. Computer Science</span>
-                      <span className="text-muted-foreground ml-2">Stanford, 2018</span>
+                      <span className="text-muted-foreground ml-2">University of California San Diego, 2021 - Present</span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
                     <div>
-                      <span className="font-medium text-foreground">M.S. Artificial Intelligence</span>
-                      <span className="text-muted-foreground ml-2">MIT, 2014</span>
+                      <span className="font-medium text-foreground">M.S. Computer Science</span>
+                      <span className="text-muted-foreground ml-2">MIT, 2021</span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
                     <div>
-                      <span className="font-medium text-foreground">B.S. Computer Engineering</span>
-                      <span className="text-muted-foreground ml-2">UC Berkeley, 2012</span>
+                      <span className="font-medium text-foreground">B.S. Electrical Engineering</span>
+                      <span className="text-muted-foreground ml-2">Sharif University of Technology, 2014</span>
                     </div>
                   </div>
                 </div>
