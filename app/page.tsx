@@ -11,22 +11,26 @@ import { Calendar, Filter, SortAsc, SortDesc } from "lucide-react"
 const publications = [
   {
     id: 1,
-    title: "Advanced Machine Learning Techniques in Healthcare",
-    journal: "Journal of Medical AI",
-    year: 2024,
-    topic: "Machine Learning",
-    date: "2024-03-15",
-    authors: "Your Name, et al.",
+    title: "Fast training of large kernel models with delayed projections",
+    journal: "39th Conference on Neural Information Processing Systems (NeurIPS 2025-Spotlight)",
+    year: 2025,
+    topics: ["Kernel methods", "Optimization"],
+    date: "2025-09-19",
+    authors: "Amirhesam Abedsoltan, Siyuan Ma, Parthe Pandit, Mikhail Belkin",
     abstract:
-      "This paper explores the application of advanced machine learning techniques in healthcare diagnostics...",
+      "Classical kernel machines have historically faced significant challenges in scaling to large datasets and model sizes--a key ingredient that has driven the success of neural networks. \
+      In this paper, we present a new methodology for building kernel machines that can scale efficiently with both data size and model size. \
+      Our algorithm introduces delayed projections to Preconditioned Stochastic Gradient Descent (PSGD) allowing the training of much larger models than was previously feasible, \
+      pushing the practical limits of kernel-based learning. We validate our algorithm, EigenPro4, across multiple datasets, demonstrating drastic training speed up over the existing \
+       methods while maintaining comparable or better classification accuracy.",
   },
   {
     id: 2,
-    title: "Sustainable Computing: Green Algorithms for the Future",
-    journal: "Environmental Computing Review",
-    year: 2023,
-    topic: "Sustainability",
-    date: "2023-11-20",
+    title: "Task Generalization With AutoRegressive Compositional Structure: Can Learning From D Tasks Generalize to Dᵀ Tasks?",
+    journal: "42nd International Conference on Machine Learning (ICML2025)",
+    year: 2025,
+    topics: ["In-context learning", "Transformers", "Theory"],
+    date: "2025-08-01",
     authors: "Your Name, Co-Author Name",
     abstract:
       "An investigation into environmentally conscious computing practices and their impact on carbon footprint...",
@@ -36,7 +40,7 @@ const publications = [
     title: "Neural Networks in Natural Language Processing",
     journal: "AI Communications",
     year: 2023,
-    topic: "Machine Learning",
+    topics: ["Machine Learning", "NLP"],
     date: "2023-08-10",
     authors: "Your Name, Research Team",
     abstract: "Exploring the latest developments in neural network architectures for NLP applications...",
@@ -46,7 +50,7 @@ const publications = [
     title: "Quantum Computing Applications in Cryptography",
     journal: "Quantum Science & Technology",
     year: 2022,
-    topic: "Quantum Computing",
+    topics: ["Quantum Computing", "Cryptography"],
     date: "2022-12-05",
     authors: "Your Name, Quantum Research Group",
     abstract: "A comprehensive study of quantum computing's potential impact on modern cryptographic systems...",
@@ -103,17 +107,17 @@ export default function HomePage() {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc")
   const [filterTopic, setFilterTopic] = useState<string>("all")
 
-  const topics = Array.from(new Set(publications.map((pub) => pub.topic)))
+  const topics = Array.from(new Set(publications.flatMap((pub) => pub.topics)))
 
   const sortedAndFilteredPublications = publications
-    .filter((pub) => filterTopic === "all" || pub.topic === filterTopic)
+    .filter((pub) => filterTopic === "all" || pub.topics.includes(filterTopic))
     .sort((a, b) => {
       if (sortBy === "date") {
         const dateA = new Date(a.date).getTime()
         const dateB = new Date(b.date).getTime()
         return sortOrder === "desc" ? dateB - dateA : dateA - dateB
       } else {
-        return sortOrder === "desc" ? b.topic.localeCompare(a.topic) : a.topic.localeCompare(b.topic)
+        return sortOrder === "desc" ? b.topics[0].localeCompare(a.topics[0]) : a.topics[0].localeCompare(b.topics[0])
       }
     })
 
@@ -316,9 +320,13 @@ export default function HomePage() {
                         <p className="text-xs text-muted-foreground mt-1">{pub.authors}</p>
                       </div>
                       <div className="flex flex-col items-end space-y-1">
-                        <Badge variant="outline" className="text-xs">
-                          {pub.topic}
-                        </Badge>
+                        <div className="flex flex-wrap gap-1 justify-end">
+                          {pub.topics.map((topic, index) => (
+                            <Badge key={index} variant="outline" className="text-xs">
+                              {topic}
+                            </Badge>
+                          ))}
+                        </div>
                         <span className="text-xs text-muted-foreground">{pub.year}</span>
                       </div>
                     </div>
