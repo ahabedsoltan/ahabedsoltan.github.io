@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Calendar, Filter, SortAsc, SortDesc } from "lucide-react"
+import { Calendar, Filter, SortAsc, SortDesc, Mail, GraduationCap } from "lucide-react"
 
 // Sample data - replace with your actual content
 const publications = [
@@ -301,6 +301,29 @@ export default function HomePage() {
                       <span className="font-medium text-foreground">B.S. Electrical Engineering</span>
                       <span className="text-muted-foreground ml-2">Sharif University of Technology, 2018</span>
                     </div>
+                  </div>
+                </div>
+
+                {/* Contact & Links */}
+                <div className="space-y-3">
+                  <h3 className="text-lg font-semibold text-foreground">Contact & Links</h3>
+                  <div className="flex flex-wrap items-center gap-4 text-sm">
+                    <a
+                      href="mailto:aabedsoltan@ucsd.edu"
+                      className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>aabedsoltan@ucsd.edu</span>
+                    </a>
+                    <a
+                      href="https://scholar.google.com/citations?user=IpR1QCoAAAAJ&hl=en&oi=ao"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <GraduationCap className="w-4 h-4" />
+                      <span>Google Scholar</span>
+                    </a>
                   </div>
                 </div>
               </div>
