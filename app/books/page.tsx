@@ -12,7 +12,7 @@ const books = [
     author: "Viktor E. Frankl",
     year: 2006,
     category: "Autobiography",
-    image: "/men_search_meaning.jpg", // Add book cover images to /public folder
+    image: "/men_search_meaning.jpg",
     rating: 5,
     notes: "Caught between free will and destiny, we face the question: do we discover meaning, create it, or leave it as our legacy?!",
   },

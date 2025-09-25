@@ -10,6 +10,21 @@ import { Calendar, Filter, SortAsc, SortDesc } from "lucide-react"
 // Sample data - replace with your actual content
 const publications = [
   {
+    id: 1,
+    title: "Fast training of large kernel models with delayed projections",
+    journal: "39th Conference on Neural Information Processing Systems (NeurIPS 2025-Spotlight)",
+    year: 2025,
+    topics: ["Kernel methods", "Optimization", "Preconditioning"],
+    date: "2024-11-25",
+    authors: "A Abedsoltan, S Ma, P Pandit, M Belkin",
+    abstract: "Classical kernel machines have historically faced significant challenges in scaling to large datasets and model sizes--a key ingredient that has driven the success of neural networks. \
+     In this paper, we present a new methodology for building kernel machines that can scale efficiently with both data size and model size. \
+     Our algorithm introduces delayed projections to Preconditioned Stochastic Gradient Descent (PSGD) allowing the training of much larger models than was previously feasible, \
+      pushing the practical limits of kernel-based learning. We validate our algorithm, EigenPro4, across multiple datasets, demonstrating drastic training speed up over \
+      the existing methods while maintaining comparable or better classification accuracy.",
+  },
+  {
+    
     id: 2,
     title: "Task Generalization With AutoRegressive Compositional Structure: Can Learning From D Tasks Generalize to Dᵀ Tasks?",
     journal: "42nd International Conference on Machine Learning (ICML2025)",
@@ -24,20 +39,7 @@ const publications = [
       Empirically, we demonstrate that Transformers achieve such exponential task generalization on sparse parity functions via In-context Learning (ICL) and chain-of-thought (CoT) reasoning. \
        We further show generalization in arithmetic and translation, beyond parity functions.",
   },
-  {
-    id: 1,
-    title: "Fast training of large kernel models with delayed projections",
-    journal: "39th Conference on Neural Information Processing Systems (NeurIPS 2025-Spotlight)",
-    year: 2025,
-    topics: ["Kernel methods", "Optimization", "Preconditioning"],
-    date: "2024-11-25",
-    authors: "A Abedsoltan, S Ma, P Pandit, M Belkin",
-    abstract: "Classical kernel machines have historically faced significant challenges in scaling to large datasets and model sizes--a key ingredient that has driven the success of neural networks. \
-     In this paper, we present a new methodology for building kernel machines that can scale efficiently with both data size and model size. \
-     Our algorithm introduces delayed projections to Preconditioned Stochastic Gradient Descent (PSGD) allowing the training of much larger models than was previously feasible, \
-      pushing the practical limits of kernel-based learning. We validate our algorithm, EigenPro4, across multiple datasets, demonstrating drastic training speed up over \
-      the existing methods while maintaining comparable or better classification accuracy.",
-  },
+
   {
     id: 3,
     title: "Context-Scaling versus Task-Scaling in In-Context Learning",
@@ -69,37 +71,6 @@ const publications = [
     A Nystrom approximation of the spectral preconditioner is often cheaper to compute and store, and has demonstrated success in practical applications. \
     In this paper we analyze the trade-offs of using such an approximated preconditioner. Specifically, we show that a sample of logarithmic size (as a function of the size of the dataset) enables the Nyström-based approximated preconditioner \
     to accelerate gradient descent nearly as well as the exact preconditioner, while also reducing the computational and storage overheads.",
-  },
-  {
-    id: 7,
-    title: "Uncertainty estimation with recursive feature machines",
-    journal: "The 40th Conference on Uncertainty in Artificial Intelligence",
-    year: 2024,
-    topics: ["Uncertainty estimation", "Feature Learning", "Kernel methods"],
-    date: "2024-07-15",
-    authors: "D Gedon, A Abedsoltan, TB Schön, M Belkin",
-    abstract: "In conventional regression analysis, predictions are typically represented as point estimates derived from covariates. \
-     The Gaussian Process (GP) offer a kernel-based framework that predicts and additionally quantifies associated uncertainties. \
-      However, kernel-based methods often underperform ensemble-based decision tree approaches in regression tasks involving tabular and categorical data. \
-       Recently, Recursive Feature Machines (RFMs) were proposed as a novel feature-learning kernel which strengthens the capabilities of kernel machines. \
-       In this study, we harness the power RFMs in a probabilistic GP-based approach to enhance uncertainty estimation through feature extraction within kernel methods. \
-        We employ this learned kernel for in-depth uncertainty analysis. On tabular datasets, our RFM-based method surpasses other leading uncertainty estimation techniques, \
-        including NGBoost and CatBoost-ensemble. Additionally, when assessing out-of-distribution performance, we found that boosting-based methods are surpassed by our RFM-based approach.",
-  },
-  {
-    id: 8,
-    title: "On emergence of clean-priority learning in early stopped neural networks",
-    journal: "arXiv preprint arXiv:2306.02533",
-    year: 2023,
-    topics: ["Neural networks", "Early stopping", "Optimization"],
-    date: "2023-06-05",
-    authors: "C Liu, A Abedsoltan, M Belkin",
-    abstract: "When random label noise is added to a training dataset, the prediction error of a neural network on a label-noise-free test dataset initially improves during early training but eventually deteriorates, \
-     following a U-shaped dependence on training time. This behaviour is believed to be a result of neural networks learning the pattern of clean data first and fitting the noise later in the training, \
-     a phenomenon that we refer to as clean-priority learning. In this study, we aim to explore the learning dynamics underlying this phenomenon. We theoretically demonstrate that, in the early stage of training, \
-     the update direction of gradient descent is determined by the clean subset of training data, leaving the noisy subset has minimal to no impact, resulting in a prioritization of clean learning. \
-     Moreover, we show both theoretically and experimentally, as the clean-priority learning goes on, the dominance of the gradients of clean samples over those of noisy samples diminishes, \
-     and finally results in a termination of the clean-priority learning and fitting of the noisy samples.",
   },
   {
     id: 5,
@@ -134,6 +105,37 @@ const publications = [
         We first provide broad empirical evidence for our three-part taxonomy, demonstrating that deep neural networks and kernel machines fit to noisy data can be reasonably well classified as \
          benign, tempered, or catastrophic. We then specialize to kernel (ridge) regression (KR), obtaining conditions on the ridge parameter and kernel eigenspectrum under which KR exhibits each of the three behaviors, \
          demonstrating the consequences for KR with common kernels and trained neural networks of infinite width using experiments on natural and synthetic datasets.",
+  },
+  {
+    id: 7,
+    title: "Uncertainty estimation with recursive feature machines",
+    journal: "The 40th Conference on Uncertainty in Artificial Intelligence",
+    year: 2024,
+    topics: ["Uncertainty estimation", "Feature Learning", "Kernel methods"],
+    date: "2024-07-15",
+    authors: "D Gedon, A Abedsoltan, TB Schön, M Belkin",
+    abstract: "In conventional regression analysis, predictions are typically represented as point estimates derived from covariates. \
+     The Gaussian Process (GP) offer a kernel-based framework that predicts and additionally quantifies associated uncertainties. \
+      However, kernel-based methods often underperform ensemble-based decision tree approaches in regression tasks involving tabular and categorical data. \
+       Recently, Recursive Feature Machines (RFMs) were proposed as a novel feature-learning kernel which strengthens the capabilities of kernel machines. \
+       In this study, we harness the power RFMs in a probabilistic GP-based approach to enhance uncertainty estimation through feature extraction within kernel methods. \
+        We employ this learned kernel for in-depth uncertainty analysis. On tabular datasets, our RFM-based method surpasses other leading uncertainty estimation techniques, \
+        including NGBoost and CatBoost-ensemble. Additionally, when assessing out-of-distribution performance, we found that boosting-based methods are surpassed by our RFM-based approach.",
+  },
+  {
+    id: 8,
+    title: "On emergence of clean-priority learning in early stopped neural networks",
+    journal: "arXiv preprint arXiv:2306.02533",
+    year: 2023,
+    topics: ["Neural networks", "Early stopping", "Optimization"],
+    date: "2023-06-05",
+    authors: "C Liu, A Abedsoltan, M Belkin",
+    abstract: "When random label noise is added to a training dataset, the prediction error of a neural network on a label-noise-free test dataset initially improves during early training but eventually deteriorates, \
+     following a U-shaped dependence on training time. This behaviour is believed to be a result of neural networks learning the pattern of clean data first and fitting the noise later in the training, \
+     a phenomenon that we refer to as clean-priority learning. In this study, we aim to explore the learning dynamics underlying this phenomenon. We theoretically demonstrate that, in the early stage of training, \
+     the update direction of gradient descent is determined by the clean subset of training data, leaving the noisy subset has minimal to no impact, resulting in a prioritization of clean learning. \
+     Moreover, we show both theoretically and experimentally, as the clean-priority learning goes on, the dominance of the gradients of clean samples over those of noisy samples diminishes, \
+     and finally results in a termination of the clean-priority learning and fitting of the noisy samples.",
   },
   {
     id: 9,
