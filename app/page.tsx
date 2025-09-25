@@ -299,7 +299,7 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-foreground">B.S. Electrical Engineering</span>
-                      <span className="text-muted-foreground ml-2">Sharif University of Technology, 2014</span>
+                      <span className="text-muted-foreground ml-2">Sharif University of Technology, 2018</span>
                     </div>
                   </div>
                 </div>
