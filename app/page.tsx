@@ -340,18 +340,18 @@ export default function HomePage() {
             <div className="w-16 h-0.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-4">
             {newsItems.map((item) => (
               <Card key={item.id} className="border-border hover:shadow-md transition-shadow">
-                <CardContent className="p-4">
-                  <div className="flex items-start space-x-3">
-                    <Calendar className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                    <div className="flex-1 space-y-1">
-                      <div className="flex items-start justify-between gap-4">
-                        <h3 className="text-base font-semibold text-foreground text-balance leading-tight">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                    <Calendar className="w-4 h-4 text-primary flex-shrink-0 self-start sm:mt-0.5" />
+                    <div className="flex-1 space-y-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+                        <h3 className="text-base font-semibold text-foreground text-balance leading-tight sm:leading-normal">
                           {item.title}
                         </h3>
-                        <Badge variant="secondary" className="text-xs whitespace-nowrap">
+                        <Badge variant="secondary" className="text-xs whitespace-nowrap self-start">
                           {item.date}
                         </Badge>
                       </div>
@@ -374,14 +374,14 @@ export default function HomePage() {
           </div>
 
           {/* Sorting and Filtering Controls */}
-          <div className="flex flex-wrap gap-3 items-center justify-between bg-card p-3 rounded-lg border border-border">
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between bg-card p-4 rounded-lg border border-border">
             <div className="flex items-center space-x-3">
               <div className="flex items-center space-x-2">
                 <Filter className="w-3 h-3 text-muted-foreground" />
                 <select
                   value={filterTopic}
                   onChange={(e) => setFilterTopic(e.target.value)}
-                  className="bg-background border border-border rounded px-2 py-1 text-xs"
+                  className="bg-background border border-border rounded px-3 py-2 text-xs min-w-0 flex-1 sm:flex-initial"
                 >
                   <option value="all">All Topics</option>
                   {topics.map((topic) => (
@@ -399,7 +399,7 @@ export default function HomePage() {
                 variant={sortBy === "date" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSortBy("date")}
-                className="text-xs h-7"
+                className="text-xs h-8"
               >
                 Date
               </Button>
@@ -407,7 +407,7 @@ export default function HomePage() {
                 variant={sortBy === "topic" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSortBy("topic")}
-                className="text-xs h-7"
+                className="text-xs h-8"
               >
                 Topic
               </Button>
@@ -415,7 +415,7 @@ export default function HomePage() {
                 variant="outline"
                 size="sm"
                 onClick={() => setSortOrder(sortOrder === "desc" ? "asc" : "desc")}
-                className="text-xs h-7 px-2"
+                className="text-xs h-8 px-2"
               >
                 {sortOrder === "desc" ? <SortDesc className="w-3 h-3" /> : <SortAsc className="w-3 h-3" />}
               </Button>
@@ -424,28 +424,28 @@ export default function HomePage() {
 
           {/* Publications List */}
           <div className="border rounded-lg overflow-hidden">
-            <div className="h-96 overflow-y-auto p-4">
-              <div className="space-y-4">
+            <div className="h-96 sm:h-[28rem] overflow-y-auto p-4 sm:p-6">
+              <div className="space-y-6">
                 {sortedAndFilteredPublications.map((pub) => (
                   <Card key={pub.id} className="border-border hover:shadow-md transition-shadow flex-shrink-0">
-                    <CardContent className="p-4">
-                      <div className="space-y-3">
-                        <div className="flex items-start justify-between gap-4">
+                    <CardContent className="p-4 sm:p-6">
+                      <div className="space-y-4">
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
                           <div className="flex-1">
-                            <h3 className="text-base font-semibold text-foreground text-balance leading-tight">
+                            <h3 className="text-base font-semibold text-foreground text-balance leading-tight sm:leading-normal">
                               {pub.title}
                             </h3>
-                            <p className="text-xs text-muted-foreground mt-1">{pub.authors}</p>
+                            <p className="text-xs text-muted-foreground mt-2">{pub.authors}</p>
                           </div>
-                          <div className="flex flex-col items-end space-y-1">
-                            <div className="flex flex-wrap gap-1 justify-end">
+                          <div className="flex flex-col sm:items-end space-y-2">
+                            <div className="flex flex-wrap gap-1 sm:justify-end">
                               {pub.topics.map((topic, index) => (
                                 <Badge key={index} variant="outline" className="text-xs">
                                   {topic}
                                 </Badge>
                               ))}
                             </div>
-                            <span className="text-xs text-muted-foreground">{pub.year}</span>
+                            <span className="text-xs text-muted-foreground font-medium">{pub.year}</span>
                           </div>
                         </div>
                         <p className="text-xs font-medium text-primary">{pub.journal}</p>
