@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Calendar, Filter, SortAsc, SortDesc, Mail, GraduationCap } from "lucide-react"
+import { Calendar, Filter, SortAsc, SortDesc, Mail, GraduationCap, Download } from "lucide-react"
 
 // Sample data - replace with your actual content
 const publications = [
@@ -323,6 +323,15 @@ export default function HomePage() {
                     >
                       <GraduationCap className="w-4 h-4" />
                       <span>Google Scholar</span>
+                    </a>
+                    <a
+                      href="/cv.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>CV</span>
                     </a>
                   </div>
                 </div>
